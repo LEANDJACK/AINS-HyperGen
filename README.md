@@ -1,4 +1,4 @@
-# ains-autogeneration
+# AINS HyperGen
 !!READ THIS README THOROUGHLY!!
 
 This application is a automation tool, and it is meant to increase the efficiency for the users of Advanced Intergrated Nilam System(AINS) by simulating and automating the inputs using AI (ChatGPT specifically) that are usually done by us humans otherwise. This tool is meant for educational purposes, and are not meant for abusing or any other kinds of havoc.
