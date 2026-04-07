@@ -3,7 +3,7 @@ from pynput.keyboard import Controller, Key
 import time
 from tkinter import messagebox
 
-content_english = "with surrounding unique content about college students, no excessive words, ONLY writing the answers without the points BUT in different lines, without paragraph spacing, help me pick a book with the following features: 1. Name of book 2. Category (either fiction or non-ficton, all UPPERCASE) 3. Number of pages 4. ISBN number 5. Writer 6. Publisher 7. Year published (after year 2000) 8. Language (ENGLISH) 9. Content of the book in around 30 words 10. Value or moral learned from this book(more than 5 words) 11. Rating given from 1-5, without decimals"
+content_english = "Without any uneeded words, get straight to the point, try to mimic a robot that follows instrucutions without any excessive actions, give the direct answer without extra words such as 'name of book' or 'book name', only writing the answers AND without the numberings BUT in different lines each, without paragraph spacing, generate the answers in the same order as the questions, help me generate a book with the following features;1. Name of book 2. Category (either fiction or non-ficton, all UPPERCASE) 3. book pages 4. ISBN number 5. Writer 6. Publisher of the book 7. Year published (after year 2000) 8. Language (ENGLISH) 9. Content of the book in around 30 words 10. Value or moral learned from this book(more than 5 words) 11. Rating given from 1-5, without decimals"
 content_malay = "dengan menggunakan tema yang baru dan tidak berulang tentang pelajar kolej, tidak berkata banyak, HANYA tuliskan jawapan dengan tiada point-point TETAPI di barisan yang berbeza, tidak memakai paragraph spacing, minta tolong generatekan satu buku dengan ciri-ciri tersebut: 1. Nama buku 2.Kategori(fiksyen atau tidak fiksyen, SEMUA HURUF BESAR) 3.bilangan mukasurat 4.nombor isbn 5.penulis 6.Penerbit 7.Tahun terbitan(selepas tahun 2000) 8.Bahasa(MELAYU) 9. Rumusan buku dalam 30 patah perkataan 10.Pengajaran dalam bahasa mudah dan melebihi 5 patah perkataan 11.Rating buku(daripada 1-5, tanpa perpeluhan)"
 
 def run_generator(language, api_key):
@@ -17,10 +17,13 @@ def run_generator(language, api_key):
         raise ValueError("Unsupported language")
 
     # Initialize OpenAI client
-    client = OpenAI(api_key=api_key)
+    client = OpenAI(
+        api_key=api_key,
+        base_url="https://api.groq.com/openai/v1"
+        )
 
     response = client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="openai/gpt-oss-20b",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -80,6 +83,7 @@ def run_generator(language, api_key):
     # Press TAB
     keyboard.press(Key.tab)
     keyboard.release(Key.tab)
+    time.sleep(0.1)
 
     #Type pages
     keyboard.type(pages)
@@ -150,9 +154,6 @@ def run_generator(language, api_key):
     time.sleep(1)
 
     # press TAB 15 times (xd)
-    keyboard.press(Key.tab)
-    keyboard.release(Key.tab)
-    time.sleep(0.1)
     keyboard.press(Key.tab)
     keyboard.release(Key.tab)
     time.sleep(0.1)

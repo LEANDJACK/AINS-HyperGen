@@ -37,7 +37,7 @@ def startprocess():
 root = Tk()
 root.geometry("400x400")
 
-App_Title = root.title("Ains HyperGen v0.0.1alpha")
+App_Title = root.title("Ains HyperGen v0.0.1alpha(groq)")
 
 App_Label = Label(root, text="AINS HyperGen", font = ("Arial", 14, "bold"))
 App_Label.pack(anchor = N)

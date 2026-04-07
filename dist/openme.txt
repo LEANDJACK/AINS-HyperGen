@@ -1,0 +1,1 @@
+Do not touch the text files. Messing with them without knowing what you're doing can cause instabilities wtih the tool.
