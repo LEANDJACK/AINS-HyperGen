@@ -42,7 +42,7 @@ this tool is entirely made with python with dependecies such as pynput and so on
 
 ## Special thanks
 
-erm, who should I even thank to(gimme your name and i will write it here xd)
+Thanks to Joson,who has helped me a lot in this project! 
 
 
 
