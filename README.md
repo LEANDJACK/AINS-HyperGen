@@ -31,7 +31,7 @@ This tool is only meant for Windows devices with Google Chrome version 120 and l
 ## Installing
 Download the [latest release of the tool](https://github.com/leandjack/ains-hypergen/tags), extract the .zip file using the Windows Explorer inbuilt into your computer, and run the .exe. No download is required, it is just that simple.
 
-Note: There is 2 files in the folder once you extract the .ZIP file, namely output.txt and apikey.txt. Please do touch touch the files, if you don't know what you are doing, as that may cause instabilities in the tool
+Note: There is 2 files in the folder once you extract the .ZIP file, namely output.txt and apikey.txt. Please do NOT touch the files, if you don't know what you are doing, as that may cause instabilities in the tool
 
 You should not need any other software or drivers to make this tool work, but if you have any problems running this tool, feel free to [submit a issue](https://github.com/leandjack/ains-hypergen/issues/new) and let me know and this tool is still in very early stages of its development.
 
